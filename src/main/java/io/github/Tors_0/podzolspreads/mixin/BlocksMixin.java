@@ -18,6 +18,6 @@ public class BlocksMixin {
             at = @At(value = "NEW", target = "(Lnet/minecraft/block/AbstractBlock$Settings;)Lnet/minecraft/block/SnowyBlock;", ordinal = 0)
     )
     private static SnowyBlock makePodzolSpread(AbstractBlock.Settings settings) {
-            return new PodzolBlock(AbstractBlock.Settings.of(Material.SOIL, MapColor.SPRUCE_BROWN).ticksRandomly().strength(0.5F).sounds(BlockSoundGroup.GRAVEL));
+            return new PodzolBlock(AbstractBlock.Settings.create().mapColor(MapColor.PODZOL).ticksRandomly().strength(0.5F).sounds(BlockSoundGroup.GRAVEL));
     }
 }
